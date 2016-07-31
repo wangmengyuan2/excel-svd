@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
+  <vendor>XXX</vendor>
+  <vendorID>VI</vendorID>
+  <name>NAME</name>
+  <series>SP</series>
+  <version>1.2</version>
+  <description>ARM 32-bit Cortex-M3 Microcontroller based device, CPU clock up to 80MHz, etc.</description>
+    <cpu>
+      <name>CM3</name>
+      <revision>r1p0</revision>
+      <endian>little</endian>
+      <mpuPresent>true</mpuPresent>
+      <fpuPresent>true</fpuPresent>
+      <nvicPrioBits>3</nvicPrioBits>
+      <vendorSystickConfig>false</vendorSystickConfig>
+    </cpu>
+  <addressUnitBits>8</addressUnitBits>
+  <width>32</width>
+  <size>32</size>
+        <peripherals>
+            <peripheral>
+              <name>TIMER0</name>
+              <version>1</version>
+              <description>32 Timer / Counter, counting up or down from different sources</description>
+              <baseAddress>0x40010000</baseAddress>
+              <size>32</size>
+              <access>read-write</access>
+                <addressBlock>
+                  <offset>0</offset>
+                  <size>0x100</size>
+                  <usage>registers</usage>
+                </addressBlock>
+                <interrupt>
+                  <name>TIMER0</name>
+                  <value>0</value>
+                </interrupt>
+                <registers>
+                    <register>
+                      <name>MY_CR</name>
+                      <description>Test 1</description>
+                      <addressOffset>0x00</addressOffset>
+                      <size>32</size>
+                      <access>read-write</access>
+                      <resetValue>0x00000000</resetValue>
+                      <resetMask>0x1337F7F</resetMask>
+                        <fields>
+                          <field>
+                              <name>EN</name>
+                              <bitRange>[0:0]</bitRange>
+                              <access>read-write</access>
+                              <description>Enable</description>
+                          </field>
+                          <field>
+                              <name>CAPEDGE</name>
+                              <bitRange>[17:16]</bitRange>
+                              <access>read-write</access>
+                              <description>Capture Edge, select which Edge should result in a counter increment or decrement</description>
+                          </field>
+                          <field>
+                              <name>TRGEXT</name>
+                              <bitRange>[21:20]</bitRange>
+                              <access>read-write</access>
+                              <description>Triggers an other Peripheral</description>
+                          </field>
+                          <field>
+                              <name>RELOAD</name>
+                              <bitRange>[25:24]</bitRange>
+                              <access>read-only</access>
+                              <description>Select RELOAD Register n to reload Timer on condition</description>
+                          </field>
+                          <field>
+                              <name>IDR</name>
+                              <bitRange>[27:26]</bitRange>
+                              <access>read-only</access>
+                              <description>Selects, if Reload Register number is incremented, decremented or not modified</description>
+                          </field>
+                          <field>
+                              <name>S</name>
+                              <bitRange>[31:31]</bitRange>
+                              <access>read-only</access>
+                              <description>Starts and Stops the Timer / Counter</description>
+                          </field>
+                        </fields>
+                    </register>
+                    <register>
+                      <name>MY_SR</name>
+                      <description>Test 2</description>
+                      <addressOffset>0x04</addressOffset>
+                      <size>32</size>
+                      <access>read-write</access>
+                      <resetValue>0x00000000</resetValue>
+                      <resetMask>0xFFFFFFFF</resetMask>
+                        <fields>
+                          <field>
+                              <name>A2</name>
+                              <bitRange>[9:0]</bitRange>
+                              <access>read-only</access>
+                              <description>test a2</description>
+                          </field>
+                          <field>
+                              <name>A3</name>
+                              <bitRange>[15:10]</bitRange>
+                              <access>read-write</access>
+                              <description>test a3</description>
+                          </field>
+                          <field>
+                              <name>A4</name>
+                              <bitRange>[31:16]</bitRange>
+                              <access>read-only</access>
+                              <description>test a4</description>
+                          </field>
+                        </fields>
+                    </register>
+                    <register>
+                      <name>reload</name>
+                      <description>Test 3 - to reload</description>
+                      <addressOffset>0x08</addressOffset>
+                      <size>32</size>
+                      <access>read-write</access>
+                      <resetValue>0x00000000</resetValue>
+                      <resetMask>0xFFFFFFFF</resetMask>
+                    </register>
+                </registers>
+            </peripheral>
+        </peripherals>
+</device>
