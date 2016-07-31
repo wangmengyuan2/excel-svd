@@ -19,7 +19,23 @@ A special 'Layer' is used to help the convertion.
   
 >   The odd number, like 1,3,5,..., means one line tag/value format, as the format: &lt;tag>value&lt;/tag>'
 
+example : 
 
+2 sheets inside
+(1) platform 
+
+![platform, cpu definition](https://github.com/neojou/excel-svd/blob/master/doc/cmsis-0.png)
+
+(2) peripheral
+
+    - Timer
+    
+![peripheral, timer](https://github.com/neojou/excel-svd/blob/master/doc/cmsis-1.png)
+    
+    - register
+    
+![peripheral, timer](https://github.com/neojou/excel-svd/blob/master/doc/cmsis-2.png)
+    
 
 ## Test Run 
 
